@@ -19,11 +19,8 @@ export default class TodoListItem extends Component {
     const { label, important = false } = this.props;
     const {done} = this.state;
 
-    let classNames = 'todo-list-item';
-    if(done){
-      classNames += ' done'
-    }
-
+    let classNames = (done) ? 'todo-list-item done' : 'todo-list-item';
+   
     const style = {
       color: important ? "steelblue" : "black",
       fontWeight: important ? "bold" : "normal"
